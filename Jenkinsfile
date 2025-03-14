@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'cd main && ./hello_exec'
+                sh 'cd main && ./hello_exec_nonexistent'  // Error: Using a non-existent executable
                 echo 'Test Stage Successful'
             }
         }
